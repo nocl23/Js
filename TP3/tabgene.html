@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <title<Premier pas avec jQuery</title>
+    <script src='jquery-2.1.3.js'></script>
+   
+
+    
+</head>
+  <body>
+
+<table id="table1"/>
+
+     <script>
+
+    var table= $('#table1');
+  table.html('');
+  for(var i=0;i<64;++i){
+    if(i%8==0){
+      var tr = $('<tr/>');
+      table.append(tr);
+    }
+      var td = $('<td/>');
+    tr.append(td);
+    td.text(i);
+  }
+
+
+  
+
+</script>
+  </body>
+</html>

@@ -18,6 +18,11 @@ var jsonData ;
 
       	 table.append(tr);
       	 var date = obj[i].dateSeance;
+
+      	 var daate = date.split("-",3);
+
+      	 var ndate = daate[2]+"/"+daate[1]+"/"+daate[0];
+
       	 var heure = obj[i].heureSeance;
       	 if(heure.length !=4){
    			heure = "0"+obj[i].heureSeance;
@@ -29,7 +34,7 @@ var jsonData ;
       	 var prof = obj[i].Prof;
       	 var salle = obj[i].Salle;
 
-   		tr.append("<td>"+date+"</td>"+"<td>"+heures+" h "+minutes+"</td>"+
+   		tr.append("<td>"+ndate+"</td>"+"<td>"+heures+" h "+minutes+"</td>"+
    			"<td>"+enseignement+"</td>"+"<td>"+prof+"</td>"+
    			"<td>"+salle+"</td>");
 
@@ -47,21 +52,6 @@ var jsonData ;
   }) ;
  
   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /*
 $(function() {
